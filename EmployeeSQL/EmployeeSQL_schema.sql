@@ -49,6 +49,8 @@ CREATE TABLE "salaries" (
     FOREIGN KEY("emp_no") REFERENCES "employees" ("emp_no")
 );
 
-
-
+-- To add primary keys for tables with no primary keys added when creating
+ALTER TABLE dept_emp ADD PRIMARY KEY(emp_no,dept_no);
+ALTER TABLE dept_manager ADD PRIMARY KEY (emp_no);
+ALTER TABLE salaries ADD PRIMARY KEY (emp_no);
 
